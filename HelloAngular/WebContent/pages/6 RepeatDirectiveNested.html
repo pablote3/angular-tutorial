@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Repeat Directive Nested</title>
+	<script src="../scripts/angular.min.js"></script>
+	<script src="../scripts/6_repeatDirectiveNested.js"></script>
+</head>
+<body ng-app="myModule" style="font-family:Arial">
+	<div ng-controller="myController">
+		<ul>
+			<li ng-repeat="country in countries">
+				{{ country.name }} - Index = {{ $index }}
+				<ul>
+					<li ng-repeat="city in country.cities">
+						{{ city.name }} - ParentIndex = {{ $parent.$index }} Index = {{ $index }}
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
