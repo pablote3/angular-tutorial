@@ -4,14 +4,12 @@
 	<meta charset="ISO-8859-1">
 	<title>Search2</title>
 	<script src="../scripts/angular.min.js"></script>
-	<script src="../scripts/12_search2.js"></script>
+	<script src="../scripts/12_searchMultipleColumn.js"></script>
 	<link href="../Styles.css" rel="stylesheet" />
 </head>
 <body ng-app="myModule">
 	<div ng-controller="myController">
-		<input type="text" ng-model="searchText.name" placeholder="Search name" />
-		<input type="text" ng-model="searchText.city" placeholder="Search city" />
-		<input type="checkbox" ng-model="exactMatch" />
+		<input type="text" ng-model="searchText" placeholder="Search city & name" />
 		<br/><br/>
 		<table>
 			<thead>
@@ -23,7 +21,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="employee in employees | filter:searchText">
+				<tr ng-repeat="employee in employees | filter:search">
 					<td>{{ employee.name }}</td>
 					<td>{{ employee.gender }}</td>
 					<td>{{ employee.salary }}</td>
