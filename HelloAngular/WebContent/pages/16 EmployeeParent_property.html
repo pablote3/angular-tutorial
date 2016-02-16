@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- unable to access sub html page in tests -->
+<!-- modern browsers don't allow file access -->
+
+<!-- XMLHttpRequest cannot load -->
+<!-- Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https, chrome-extension-resource -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>EmployeeParent</title>
+	<script src="../scripts/angular.min.js"></script>
+	<script src="../scripts/16_includeDirective_property.js"></script>
+	<link href="../Styles.css" rel="stylesheet" />
+</head>
+<body ng-app="myModule">
+	<div ng-controller="myController">
+		<div ng-include="employeeView"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>EvaluateExpression</title>
+	<script src="../scripts/angular.min.js"></script>
+	<script src="../scripts/15_evaluateExpression.js"></script>
+	<link href="../Styles.css" rel="stylesheet" />
+</head>
+<body ng-app="myModule">
+	<div ng-controller="myController">
+		<ul>
+			<li ng-repeat="country in countries" ng-init="parentIndex = $index">
+				{{ country.name }}
+				<ul>
+					<li ng-repeat="city in country.cities">
+						{{ city.name }} ParentIndex = {{parentIndex}}, Index = {{$index}}
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

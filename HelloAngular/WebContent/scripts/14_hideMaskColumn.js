@@ -7,7 +7,7 @@ var app = angular
 			{ name: "Mark", gender: "Male", city: "London", salary: 57000 },
 			{ name: "Pam", gender: "Female", city: "Chennai", salary: 53000 },
 			{ name: "Todd", gender: "Male", city: "London", salary: 60000 }
-		]
+		];
 		
 		$scope.employees = employees;
 
