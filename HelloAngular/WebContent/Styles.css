@@ -15,6 +15,14 @@ th {
 	cursor: pointer;
 }
 
+div {
+	width: 400px;
+	border: 1px solid black;
+	font-family: Arial;
+	font-size: large;
+	padding 5px;
+}
+
 .arrow-up {
 	width: 0;
 	height: 0;
