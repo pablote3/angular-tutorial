@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="demoApp">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="Demo">
 <head>
-	<title>AnchorScroll</title>
+	<title>WebSite</title>
 	<script src="../scripts/angular.min.js"></script>
 	<script src="../scripts/angular-route.min.js"></script>
+	<script src="../scripts/24_script.js"></script>
 	<link href="../24_Styles.css" rel="stylesheet" />
+	<base href="/" />
 </head>
 <body>
 	<table style="font-family: Arial">
@@ -17,9 +19,9 @@
 		</tr>
 		<tr>
 			<td	class="leftMenu">
-				<a href="#/home">Home</a>
-				<a href="#/courses">Courses</a>
-				<a href="#/students">Students</a>
+				<a href="home">Home</a>
+				<a href="courses">Courses</a>
+				<a href="students">Students</a>
 			</td>
 			<td class="mainContent">
 				<ng-view></ng-view>
