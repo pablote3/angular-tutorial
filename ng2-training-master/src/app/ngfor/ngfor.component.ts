@@ -14,11 +14,13 @@ import {PersonServiceService} from "../person-service.service";
 })
 export class NgforComponent {
   public persons;
+
   constructor(PersonServiceService: PersonServiceService) {
-    this.persons = PersonServiceService.getList();
+    this.persons = PersonServiceService.getList().subscribe(data => this.persons = data);
   }
 
   getDisplayName(person) {
     return person.name + " - Employer: " + person.company;
   }
+
 }
