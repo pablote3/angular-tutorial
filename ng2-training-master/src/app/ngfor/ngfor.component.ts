@@ -10,7 +10,11 @@ import {PersonServiceService} from "../person-service.service";
         >
           {{  i + " " + even + " " + getDisplayName(person)  + " " + (person.birthDate | date: 'MM/dd/y') + " " + (person.address | accountNumber) }}
         </li>
-      </ul>`
+      </ul>
+      <button (click)="show = false">
+        Destroy ngForComponent
+      </button>
+      `
 })
 export class NgforComponent {
   public persons;
@@ -22,5 +26,8 @@ export class NgforComponent {
   getDisplayName(person) {
     return person.name + " - Employer: " + person.company;
   }
+}
 
+export class AppComponent {
+  show = true;
 }
