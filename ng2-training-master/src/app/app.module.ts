@@ -37,6 +37,8 @@ import {SpinnerComponent} from "./spinner/spinner.component";
 import {TwoWayDataBindingExampleComponent} from "./two-way-data-binding-example/two-way-data-binding-example.component";
 import { MyFirstComponentComponent } from './my-first-component/my-first-component.component';
 import { HighlightDirective } from './highlight.directive';
+import { AccountNumberPipe } from './account-number.pipe';
+import { PersonServiceService } from './person-service.service';
 //import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -50,6 +52,7 @@ import { HighlightDirective } from './highlight.directive';
     LoaderViewChildComponent,
     MyFirstComponentComponent,
     HighlightDirective,
+    AccountNumberPipe,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,7 @@ import { HighlightDirective } from './highlight.directive';
     RouterModule //, routing
     //,ReactiveFormsModule
   ],
-  providers: [AuthGuard, LoginService, PostsService],
+  providers: [AuthGuard, LoginService, PostsService, PersonServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,13 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-first-component.component.css'],
   template: `
     <div>
+      <h2>Hello {{name}}</h2>
       <p>my component is alright</p>
     </div>
   `
 })
 export class MyFirstComponentComponent implements OnInit {
-
-  constructor() { }
+  name : string;
+  constructor() {
+    this.name = 'Pablote';
+  }
 
   ngOnInit() {
   }
