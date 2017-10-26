@@ -1,6 +1,8 @@
 <form #form="ngForm" (ngSubmit)="logForm(form.value)" ngNativeValidate >
+  Pristine: {{form.pristine}}<br>
+
   <label>Firstname:</label>
-  <input type="text" name="firstname" ngModel required>
+  <input type="text" name="firstname" ngModel #firstName="ngModel" required>
   <br/>
   <label>Lastname:</label>
   <input type="text" name="lastname" ngModel>
@@ -9,10 +11,18 @@
   <input type="text" name="street" ngModel>
   <br/>
   <label>Zip:</label>
-  <input type="text" name="zip" ngModel>
+  <input type="text" name="zip" ngModel #zip required pattern="[0-9]{5}">
+  <div *ngIf="zip.invalid && zip.dirty" class="alert">
+    Please enter a 5-digit zipcode
+  </div>
   <br/>
   <label>City:</label>
   <input type="text" name="city" ngModel>
   <br/>
+  <!--<label>City:</label>-->
+  <!--<select type="text" name="state" ngModel>-->
+    <!--<option *ngFor="let state of states | async" [value]="state.abbreviation">{{state.name}}</option>-->
+  <!--</select>-->
+  <!--<br/>-->
   <button type="submit">Submit</button>
 </form>
