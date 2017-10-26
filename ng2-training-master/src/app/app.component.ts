@@ -7,13 +7,12 @@ import { Component } from '@angular/core';
       <app-my-first-component></app-my-first-component>
       <app-model></app-model>
       
-      <!--
       Person Service
       <app-ngfor></app-ngfor>
-      -->
-      
+  
       asynch
       <app-ngfor-asynch></app-ngfor-asynch>
+      
       <!-- app-hiding></app-hiding -->
     
       <app-ngswitch></app-ngswitch>
