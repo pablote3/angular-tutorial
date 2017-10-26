@@ -21,7 +21,7 @@ export class NgforComponent {
   }
 
   getDisplayName(person) {
-    console.log("personName = " + person.name);
+//    console.log("personName = " + person.name);
     return person.name + " - Employer: " + person.company;
   }
 }

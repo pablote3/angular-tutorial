@@ -1,8 +1,9 @@
 <p>
-  <button (click)="showPopup = true">Show pop-up</button>
+  <button (click)="promptUser()">Show pop-up</button>
 
-  <app-popup-window [isOpen]="showPopup" title="Test pop-up"
+  <app-popup-window [isOpen]="showPopup" title="Hello World"
                     (onClose)="popupClosed($event)">
-    This is the content of the pop-up (thanks to transclusion)
+    {{name}} is viewing this pop-up
   </app-popup-window>
 </p>
+

@@ -17,6 +17,7 @@ import { Component } from '@angular/core';
     
       <app-ngswitch></app-ngswitch>
       <app-ng-class></app-ng-class>
+    
   `
 })
 

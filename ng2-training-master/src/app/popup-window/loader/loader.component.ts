@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 export class LoaderComponent {
 
   showPopup = false;
+  name = '';
 
   constructor() { }
 
@@ -15,4 +16,8 @@ export class LoaderComponent {
     this.showPopup = false;
   }
 
+  promptUser() {
+    this.name = prompt('Please enter your name');
+    this.showPopup = true;
+  }
 }
