@@ -39,6 +39,7 @@ import { MyFirstComponentComponent } from './my-first-component/my-first-compone
 import { HighlightDirective } from './highlight.directive';
 import { AccountNumberPipe } from './account-number.pipe';
 import { PersonServiceService } from './person-service.service';
+import { NgforAsynchComponent } from './ngfor-asynch/ngfor-asynch.component';
 //import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -53,6 +54,7 @@ import { PersonServiceService } from './person-service.service';
     MyFirstComponentComponent,
     HighlightDirective,
     AccountNumberPipe,
+    NgforAsynchComponent,
   ],
   imports: [
     BrowserModule,
