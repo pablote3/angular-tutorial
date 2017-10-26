@@ -11,19 +11,17 @@ import {PersonServiceService} from "../person-service.service";
           {{  i + " " + even + " " + getDisplayName(person)  + " " + (person.birthDate | date: 'MM/dd/y') + " " + (person.address | accountNumber) }}
         </li>
       </ul>
-      <button (click)="show = false">
-        Destroy ngForComponent
-      </button>
       `
 })
 export class NgforComponent {
-  public persons;
+  public persons = [];
 
   constructor(PersonServiceService: PersonServiceService) {
-    this.persons = PersonServiceService.getList().subscribe(data => this.persons = data);
+    PersonServiceService.getList().subscribe(data => this.persons = data);
   }
 
   getDisplayName(person) {
+    console.log("personName = " + person.name);
     return person.name + " - Employer: " + person.company;
   }
 }
