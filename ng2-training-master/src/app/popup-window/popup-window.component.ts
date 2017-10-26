@@ -1,11 +1,15 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {
+  ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit,
+  Output
+} from '@angular/core';
 
 @Component({
   selector: 'app-popup-window',
   templateUrl: './popup-window.component.html',
-  styleUrls: ['./popup-window.component.css']
+  styleUrls: ['./popup-window.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PopupWindowComponent implements OnInit {
+export class PopupWindowComponent implements OnInit, OnChanges, OnDestroy {
 
   @Input()
   isOpen = false;
@@ -18,6 +22,14 @@ export class PopupWindowComponent implements OnInit {
 
   ngOnInit() {
     console.log('NG ON INIT');
+  }
+
+  ngOnChanges() {
+    console.log("NG ON CHANGES")
+  }
+
+  ngOnDestroy() {
+    console.log("NG ON DESTROY")
   }
 
   closePopup() {
