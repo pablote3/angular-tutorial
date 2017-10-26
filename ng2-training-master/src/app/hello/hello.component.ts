@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ActivatedRoute, ParamMap} from "@angular/router";
 
 @Component({
   selector: 'app-hello',
@@ -13,13 +14,19 @@ export class HelloComponent {
   name : string;
   firstName: string;
 
-  constructor() {
+  constructor(private route : ActivatedRoute) {
     this.name = 'Angular';
-    this.firstName = 'John'
+    this.firstName = 'John';
+    route.paramMap.
+      subscribe((params: ParamMap) => this.name = params.get('name'))
+
   }
 
   getName() {
     return this.firstName + ' ' + this.name
   }
+
+
+
 
 }

@@ -10,7 +10,7 @@ const appRoutes: Routes = [
     path: 'if', component: NgifComponent
   },
   {
-    path: '', component: HelloComponent
+    path: 'hello/:name', component: HelloComponent
   },
   {
     path: 'http', component: HttpComponent
