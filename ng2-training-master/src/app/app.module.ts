@@ -40,7 +40,7 @@ import { HighlightDirective } from './highlight.directive';
 import { AccountNumberPipe } from './account-number.pipe';
 import { PersonServiceService } from './person-service.service';
 import { NgforAsynchComponent } from './ngfor-asynch/ngfor-asynch.component';
-//import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -61,8 +61,9 @@ import { NgforAsynchComponent } from './ngfor-asynch/ngfor-asynch.component';
     FormsModule,
     HttpModule,
     HttpClientModule,
-    RouterModule //, routing
-    //,ReactiveFormsModule
+    RouterModule,
+    routing,
+    ReactiveFormsModule
   ],
   providers: [AuthGuard, LoginService, PostsService, PersonServiceService],
   bootstrap: [AppComponent]
