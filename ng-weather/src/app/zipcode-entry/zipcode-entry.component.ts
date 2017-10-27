@@ -9,6 +9,8 @@ export class ZipcodeEntryComponent implements OnInit {
 
   constructor() { }
 
+  zip : string = "Tester";
+
   ngOnInit() {
   }
 

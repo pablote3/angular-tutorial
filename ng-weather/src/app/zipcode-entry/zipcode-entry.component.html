@@ -1,9 +1,9 @@
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><title>NgWeather</title><div class="container-fluid">
   <h2>Enter a zip code:</h2>
-  <input class="form-control" placeholder="Zipcode" type="text">
+  <input class="form-control" [value]="zip" placeholder="Zipcode" type="text">
   <br>
-    <button class="btn btn-primary">
+    <button class="btn btn-primary" (click)="isBlue = true">
       Add location
     </button>
 </div>

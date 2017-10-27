@@ -23,7 +23,6 @@ export class CurrentConditionsComponent implements OnInit {
   }
 
   getDisplayName() {
-    debugger;
     return this.weather;
   }
 
