@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ZipcodeEntryComponent } from './zipcode-entry/zipcode-entry.component';
+import { CurrentConditionsComponent } from './current-conditions/current-conditions.component';
+import { WeatherService } from './weather.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ZipcodeEntryComponent
+    ZipcodeEntryComponent,
+    CurrentConditionsComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
