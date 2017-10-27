@@ -8,7 +8,7 @@ export class PersonServiceService {
   constructor(private http : HttpClient) { }
 
   getList() : Observable<Person[]> {
-    return this.http.get("http://localhost:8080/persons.json")
+    return this.http.get("http://localhost:8081/persons.json")
   }
 }
 
