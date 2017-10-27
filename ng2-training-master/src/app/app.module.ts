@@ -41,6 +41,7 @@ import { AccountNumberPipe } from './account-number.pipe';
 import { PersonServiceService } from './person-service.service';
 import { NgforAsynchComponent } from './ngfor-asynch/ngfor-asynch.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ComponentComponent } from './component/component.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HighlightDirective,
     AccountNumberPipe,
     NgforAsynchComponent,
+    ComponentComponent,
   ],
   imports: [
     BrowserModule,
